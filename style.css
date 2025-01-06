@@ -64,6 +64,11 @@ body {
 	width: 100%;
 	max-width: 72em; 
 	margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
 }
 .page-header, .page-section, .page-footer {
   padding: 0 20px;
@@ -80,24 +85,48 @@ h1 {
   font-size: 40px;
   font-size: 2.5rem;
   margin-bottom: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 h1 > span {
   display: block;
+  flex: 1 0 100%;
+  text-align: center;
 }
 h1 span.head-name {
+  font-weight: 100;
   text-transform: uppercase;
-  color: var(--highlight);
-  padding-bottom: .5em;
-  border-bottom: 1px solid var(--dark-gray);
+  letter-spacing: 0;
+}
+.logo-lines {
+  display: block;
+  width: 7.2em;
+  margin-top: -.25em;
+  margin-right: .25em;
 }
 h1 span.head-description {
-  font-size: 24px;
-  font-size: 1.5rem;
-  padding-top: 20px;
+  font-size: 20px;
+  font-size: 1.25rem;
+  color: var(--highlight);
+  padding-top: 1em;
+}
+main {
+  max-width: 36em;
+  margin: 0 auto;
+}
+main > section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+.contact-buttons {
+  flex: 1 0 100%;
 }
 h2 {
-  font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 20px;
+  font-size: 1.25rem;
   margin-bottom: 20px;
 }
 p {
@@ -139,12 +168,12 @@ a.resume-link:hover:after {
   font-size: 16px;
   display: inline-block;
   width: 22%;
-  margin-right: 4%;
+  margin-right: 8%;
   width: calc(25% - 15px);
-  margin-right: calc(10px);
+  max-width: 3em;
+  margin-right: 20px;
   max-width: 3.25em;
   padding-bottom: 4px;
-
 }
 .contact-buttons a:focus,
 .contact-buttons a:active,
@@ -176,6 +205,7 @@ img.tiger-pic {
       display: flex;
     }
     .page-wrapper {
+      flex-wrap: nowrap;
       margin: 0 auto;
     }
     .page-header, .page-main {
@@ -183,18 +213,21 @@ img.tiger-pic {
       justify-content: center;
     }
     .page-header {
-      border-right: 1px solid var(--dark-gray);
       padding-right: 0;
       margin:  0;
       flex: 1 0 40%;
-      text-align: right;
     }
     h1 {
       width: 100%;
       margin-bottom: 0;
-    }
-    h1 > span {
       padding-right: 40px;
+    }
+    h1 span.head-description {
+      padding-top: .25em;
+    }
+    main > section {
+      justify-content: start;
+      text-align: left;
     }
     .page-main .page-section {
       padding-left: 40px;
@@ -206,13 +239,14 @@ img.tiger-pic {
   }
 
   @media (min-width: 70em) {
-    h1 span.head-description {
-      font-size: 32px;
-      font-size: 2rem;
+    h1 {
+      font-size: 48px;
+      font-size: 3rem;
     }
-    h2 {
-      font-size: 28px;
-      font-size: 1.75rem;
+
+    h1 span.head-description, h2 {
+      font-size: 22px;
+      font-size: 1.675rem;
     }
     p {
       font-size: 20px;
